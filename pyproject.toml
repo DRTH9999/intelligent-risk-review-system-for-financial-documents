@@ -1,0 +1,25 @@
+[project]
+name = "intelligent-risk-review-system-for-financial-documents"
+version = "1.1.0"
+description = "财务单据智能风险审核系统：单据、附件解析、风险规则、审批流转与报告导出"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "SQLAlchemy>=2.0",
+    "PyJWT>=2.8",
+    "python-multipart>=0.0.9",
+    "pypdf>=5.0",
+    "pypdfium2>=4.30",
+    "reportlab>=4.0",
+    "Pillow>=10.0",
+    "rapidocr-onnxruntime>=1.2.3",
+    "python-dotenv>=1.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
